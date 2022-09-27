@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #edeef3;
+}
+
+header {
+  position: relative;
+  padding: 68px 0 140px;
+  background: linear-gradient(92.33deg, #087990 0.12%, #055160 100%);
+  background-size: cover;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 986px;
+}
+
+.heading {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 87px;
+  text-align: center;
+  color: #cff4fc;
+}
+
+.heading_item {
+  margin-top: 4px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #cff4fc;
+}
+
+.form {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.form_in {
+  min-width: 820px;
+  min-height: 64px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: #abb5be;
+  background: #ffffff;
+}
+.form_in::placeholder {
+  color: #abb5be;
+  padding: 22px 0 21px 32px;
+}
+
+.grid {
+  padding: 80px 0 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 19px;
+  border-bottom: 1px solid #ced4da;
+}
+
+.card {
+  /* padding: 24px 0 24px; */
+  width: 314px;
+  height: 182px;
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.img {
+  margin-top: 24px;
+  font-size: 48px;
+}
+
+.card_n {
+  height: 28px;
+  margin: 18px 0 12px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  color: #000000;
+  text-decoration-line: underline;
+}
+
+.text {
+  display: inline-block;
+  width: 268px;
+  height: 30px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14.52px;
+  color: #3f444a;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list {
+  display: inline-block;
+  padding: 12px 14px;
+  border: 1px solid;
+  color: #dee2e6;
+  transition: 0.2s;
+}
+
+.list a {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  text-decoration: none;
+  color: #055160;
+  transition: 0.2s;
+}
+
+.list:hover {
+  background-color: #055160;
+  transition: 0.2s;
+  color: #ffffff;
+}
