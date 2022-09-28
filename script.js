@@ -1,3 +1,5 @@
+"use strict"
+
 import {data} from "./emoji.js";
 
 function repeats(arr) {
@@ -6,16 +8,12 @@ function repeats(arr) {
   });
 }
 
-const card = [
-  {title: "💯", subTitle: "100", text: "Hundred, points, symbol, wow, win, perfect, parties"}
-]
 
 const grid = document.querySelector(".grid")
 
 function createCard(cardObj) {
   const card = document.createElement("div")
   card.className = "card"
-  console.log(cardObj)
 
   const symbol = document.createElement("h2")
   symbol.textContent = cardObj.symbol
@@ -35,12 +33,19 @@ function createCard(cardObj) {
 
   return card;
 }
-  console.log(card)
-
-createCard(card[0])
 
 repeats(data)
 
-data.forEach(elem => {
-  grid.append(createCard(elem))
-});
+data.forEach(elem => grid.append(createCard(elem)));
+
+const inp = document.querySelector("input")
+const form = document.forms[0]
+form.addEventListener("submit", (event) => event.preventDefault()) ///предотвращает отправку
+inp.addEventListener("change", inpHand)
+function inpHand(event) {
+let res = event.target.value
+let result = data.filter((elem) => elem.keywords.includes(res.toLowerCase().trim().replace(/\s/g,'')) || elem.title.includes(res.toLowerCase().trim()))
+grid.innerHTML = "";
+result.forEach((elem) => grid.append(createCard(elem)));
+}
+
