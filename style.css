@@ -70,6 +70,8 @@ header {
   grid-template-columns: repeat(3, 1fr);
   gap: 19px;
   border-bottom: 1px solid #ced4da;
+  overflow: scroll;
+  height: 300px;
 }
 
 .card {
